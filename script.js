@@ -34,7 +34,7 @@ for(let i=0;i<addTask.length;i++){
 //Utility Function for Adding the Task
 function addTaskPart1(event){
     var groupElement = event.target.parentElement.getElementsByTagName('h2')[0];
-    var groupName="Un-Grouped Tasks";
+    var groupName="Un-Grouped Ideas";
     if(groupElement)
         groupName = groupElement.innerHTML;
     var taskDetail = event.target.parentElement.getElementsByClassName('taskText')[0];
@@ -43,7 +43,7 @@ function addTaskPart1(event){
 }
 
 //Final Function to Add the Task
-function addTaskToGroup(taskDetail,groupName="Un-Grouped Tasks"){
+function addTaskToGroup(taskDetail,groupName="Un-Grouped Ideas"){
     var groups = document.getElementsByClassName('taskList');
     var task = document.createElement('li');
     var taskContent =`
