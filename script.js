@@ -8,7 +8,7 @@ function addGroup(title="Hello 1"){
     var groupDiv = document.createElement("div");
     groupDiv.className="taskList";
     var groupContent = `
-        <input class="taskText" cols="10" rows="1" placeholder="New Task!!!"></input>
+        <input class="taskText" cols="10" rows="1" placeholder="New Idea!!!"></input>
         <button class="addTask btn">Add</button> 
         <h2>${title}</h2>
         <ol>
