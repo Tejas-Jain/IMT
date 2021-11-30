@@ -12,20 +12,13 @@ function addGroup(title="Hello 1"){
         <button class="addTask btn">Add</button> 
         <h2>${title}</h2>
         <ol>
-            <li>
-                This is One Task.
-                <input type="checkbox">    
-            </li>
-            <li>
-                This is Second Task.
-                <input type="checkbox">
-            </li>
         </ol>
     `;
     groupDiv.innerHTML = groupContent;
     document.getElementsByClassName("taskGroups")[0].appendChild(groupDiv);
 
-
+    var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+    groupDiv.style.backgroundColor = randomColor;
     //Adding Event Listener to 
     var addTask = groupDiv.getElementsByClassName('addTask');
     addTask[0].addEventListener('click', addTaskPart1);
@@ -54,8 +47,8 @@ function addTaskToGroup(taskDetail,groupName="Un-Grouped Tasks"){
     var groups = document.getElementsByClassName('taskList');
     var task = document.createElement('li');
     var taskContent =`
-        ${taskDetail}
-        <input type="checkbox">
+        <span>${taskDetail}</span>
+        <input class="checkbox" type="checkbox">
     `;
     task.innerHTML = taskContent;
     for(var i=0;i<groups.length;i++){
@@ -63,4 +56,21 @@ function addTaskToGroup(taskDetail,groupName="Un-Grouped Tasks"){
             groups[i].getElementsByTagName('ol')[0].appendChild(task);
         }
     }
+
+    //Adding Event to CheckBoxes
+    var checkbox= task.getElementsByClassName("checkbox");
+    checkbox[0].addEventListener('click', strikeOut1);
+}
+
+
+// //Adding Event Listener to CheckBoxes.
+function strikeOut1(event){
+    var click = 0;
+    var textElement = event.target.parentElement.getElementsByTagName('span')[0];
+    if(click%2==0)
+        textElement.style = "text-decoration: line-through";
+    else
+        textElement.style = "text-decoration: none";
+    click++;
+    event.target.parentElement.getElementsByClassName('checkbox')[0].style = "display: none";
 }
