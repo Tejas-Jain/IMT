@@ -1,0 +1,19 @@
+header{
+    text-align: center;
+    font-size: 3em;
+}
+.options{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1em;
+}
+.taskGroups{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.taskList{
+    border: 2px solid black;
+    border-radius: 2em;
+    padding: 0.5em;
+}

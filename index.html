@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+<!-- Header Section -->
+    <header> My To-Do List </header>
+
+<!-- Header Button Section -->
+    <div class="options">
+        <span>
+            <input class="newGroupTitle" type="text" cols="10" rows="1" placeholder="New Group"></input>
+            <button class="addSection">Add Section</button>
+        </span>
+        <span>
+            <input class="taskText" type="text" cols="10" rows="1" placeholder="New Un-Grouped Task"></input>
+            <button class="addTask btn">Add Task</button>
+        </span>
+    </div>
+
+<!-- Task Group Section -->
+    <div class="taskGroups">
+        <div class="taskList">
+            <input class="taskText" cols="10" rows="1" placeholder="New Task!!!"></input>
+            <button class="addTask btn">Add</button> 
+            <h2>Un-Grouped Tasks</h2>
+            <ol>
+                <li>
+                    This is One Task.
+                    <input type="checkbox">    
+                </li>
+                <li>
+                    This is Second Task.
+                    <input type="checkbox">
+                </li>
+            </ol>
+        </div>
+    </div>
+
+
+</body>
+</html>
